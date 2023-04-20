@@ -1,1 +1,1 @@
-web: gunicorn app:farigpt
+web: gunicorn app:app
