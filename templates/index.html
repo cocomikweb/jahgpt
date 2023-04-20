@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>iTal GPT</title>
+  <link
+    rel="shortcut icon"
+    href="{{ url_for('static', filename='bob.png') }}"
+  />
+  <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}" />
+</head>
+
+<body>
+  <section class="result_section">
+    {% if result %}
+    <div class="result" contenteditable="true">{{ result }}</div>
+      {% else %}
+    <div class="result">
+      <p>
+        Happy 420 mi bredren! Mi a JahGPT, an AI train up fi ansah question dem wid a irie vibe! Ask mi anyting yuh waan!✌️❤️🌿 
+      </p>
+      <p style="font-size: .8rem;">
+        ⚠️DISCLAIMER: Use of this service is solely intended for entertainment purposes.
+      </p>
+    </div>
+    {% endif %}
+  </section>
+
+  <section class="form_section">
+    <div class="loader" id="loader"></div>
+    <form action="/" method="post" onsubmit="showLoader();">
+      <input type="text" name="the_input" placeholder="Big up breda, wah yuh waan know?" required />
+      <input type="submit" value="Fling iT!" id="submit-button" />
+    </form>
+  </section>
+</body>
+
+  <script>
+    const showLoader = () => {
+      document.getElementById("loader").style.display = "inline-block";
+      document.getElementById("submit-button").disabled = true;      
+    }
+  </script>
+</html>

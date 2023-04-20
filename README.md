@@ -1,0 +1,2 @@
+# farigpt
+ tuned gpt model

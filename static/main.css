@@ -1,0 +1,129 @@
+@font-face {
+  font-family: "ColfaxAI";
+  src: url(https://cdn.openai.com/API/fonts/ColfaxAIRegular.woff2)
+      format("woff2"),
+    url(https://cdn.openai.com/API/fonts/ColfaxAIRegular.woff) format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "ColfaxAI";
+  src: url(https://cdn.openai.com/API/fonts/ColfaxAIBold.woff2) format("woff2"),
+    url(https://cdn.openai.com/API/fonts/ColfaxAIBold.woff) format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+body,
+input {
+  font-size: 16px;
+  line-height: 24px;
+  color: #222;
+  font-family: "ColfaxAI", Helvetica, sans-serif;
+}
+body {
+  position: relative;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: stretch;
+  background-image: url(bob.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 40% 20%;
+  position: relative;
+  height: 100vh;
+}
+
+.result_section {
+  flex: 1 0;
+  overflow: scroll;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.form_section {
+  display: flex;
+  height: 80px;
+}
+
+
+
+.icon {
+  width: 34px;
+}
+h3 {
+  font-size: 32px;
+  line-height: 40px;
+  font-weight: bold;
+  color: firebrick;
+  margin: 16px 0 40px;
+}
+form {
+  position: relative;
+  flex: 1 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: stretch;
+}
+input[type="text"] {
+  flex: 1 0;
+  padding: 12px 16px;
+  border: none;
+  outline: none;
+  color: gold;
+  background: green;
+}
+::placeholder {
+  color: gold;
+  opacity: 1;
+}
+input[type="submit"] {
+  color: green;
+  background: gold;
+  border: none;
+  text-align: center;
+  cursor: pointer;
+  flex: 0 80px;
+}
+input[type="submit"]:active {
+  background: red;
+  color: yellow;
+}
+.result {
+/*  font-weight: bold;*/
+  margin-top: 40px;
+  backdrop-filter: blur(8px) brightness(0.3);
+  -webkit-backdrop-filter: blur(8px) brightness(0.3);
+  color: limegreen;
+  padding: 12px;
+}
+
+.loader {
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #3A7A3E;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+  display: none; /* Hide the loader initially */
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.formatted-text {
+  white-space: pre-wrap;
+  line-height: 1.6;
+  font-size: 1rem;
+}
